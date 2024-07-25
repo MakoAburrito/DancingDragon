@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.ExtraBold{
+    font-weight: bold;
+    font-weight: 900;
+    color:aliceblue;
+    text-shadow: 1px 2px 3px black;
+    text-decoration: none;
+}
+/*This is the nav bar*/
+.NavContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #7a1401;
+    padding: .5srem;
+}
+
+.MenuContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.MenuItem{
+    padding: 1rem;
+}
+.MenuItem a:hover{
+    color:#b88080;
+    text-decoration: none;
+}
+a.ExtraBold.MenuItem:hover{
+    color:#b88080;
+    text-decoration: none;
+}
+
+.Logo{
+    height: 125px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.LogoContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+/*Hamburger Menu*/
+.togglebtn{
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.togglebtn .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px black;
+}
+/*Image Carousel Styles*/
+.ImageCarrousel{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    height: 700px;
+    width: 100vw;
+}
+.slides{
+    height: 100vh;
+    display: flex;
+}
+.slide img{ 
+    width: 100vw;
+    height: 700px;
+    object-fit: cover;
+}
+/*Main Styles*/
+/*Footer Styles*/
+footer{
+    position: relative;
+    margin-top: 150px;
+}
+
+.semiCircle {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 150px 150px 0 0;
+    line-height: 10px;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold; 
+    background-color: aliceblue;
+    box-shadow: 0 -19px 19px 2px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-arrow-up {
+    color: #b40f0f; /* Set icon color */
+    font-size: 2.25rem;/* Adjust icon size as needed */
+}
+.LinkContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ff9683;
+    z-index: 5;
+}
+.LinkContainer h1{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(145, 42, 42);
+    padding: 10px;
+    font-weight: bold; 
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+    color:#ff6d6d
+    
+}
+.Contact{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(245, 113, 113);
+    padding: 10px;
+    font-weight: bold; 
+    text-shadow: 0 3px 4px rgba(0, 0, 0, .5);
+    color:#ffc5c5;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.Contact2{
+    background-color: rgb(255, 162, 162);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+.Contact2 a{
+    padding: 10px;
+    text-align: center;
+    font-weight: bold; 
+    text-shadow: 0 3px 4px rgba(0, 0, 0, .5);
+    color:#ff1b1b;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+.Contact:hover{
+    color:#ff0000;
+    text-shadow: 0 3px 4px rgba(255, 255, 255, 0.5);
+}
+.LinkContainer h6{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    padding: 5px;
+    font-weight: bold; 
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+    color:#ffffff
+}
+.Links {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+}
+.LinkItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Images/blob2.svg'), url('Images/blob.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    Background-blend-mode: color-dodge;
+    box-shadow: 0 17px 9px -19px rgba(0, 0, 0, 0.116);
+}
+.LinkItems:hover{
+    position: relative;
+    top: -10px;
+}
+.LinkItems svg{
+    height: 70px;
+    width: 70px;
+}
+.LinkItems svg:hover{
+    position: relative;
+    top: -10px;
+    
+}
+/*MediaQueries*/
+@media(max-width: 610px){
+    /*Nav Bar Media Queries*/
+    .MenuItem{
+        display: none;
+    }
+    .togglebtn{
+        display: flex;
+    }
+    .NavContainer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .NavContainer .MenuContainer{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .MenuItem.active{
+        display: flex;
+    }
+}
