@@ -82,19 +82,120 @@ a.ExtraBold.MenuItem:hover{
     align-items: center;
 }
 .slider{
-    height: 700px;
+    height: 745px;
     width: 100vw;
+    overflow: hidden;
 }
 .slides{
     height: 100vh;
     display: flex;
 }
+.slides input{
+    display: none;
+}
+.slide{
+    width: 100%;
+    transition: 2s;
+}
 .slide img{ 
     width: 100vw;
-    height: 700px;
+    height: 745px;
     object-fit: cover;
 }
+.navigation-manual{
+    position: absolute;
+    width: 100%;
+    margin-top: 650px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: aliceblue;
+}
+/*Used to move the images from left to right*/
+#radio1:checked ~.first{
+    margin-left: 0;
+}
+#radio2:checked ~.first{
+    margin-left: -100%;
+}
+#radio3:checked ~.first{
+    margin-left: -200%;
+}
+#radio4:checked ~.first{
+    margin-left: -300%;
+}
+/* For the Auto navigation*/
+.navigation-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 650px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: red;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: red;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: red;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: red;
+}
+
+
 /*Main Styles*/
+/*Grid Styles*/
+.ServicesContainer{
+    background-image: linear-gradient(red, white);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 250px, 1fr));
+}
+.GridItem{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GridItem a{
+    width: 325px;
+    height: 200px;
+    background-color: #3d0808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 30px;
+    text-decoration: none;
+    color: White;
+    font-size: 30px;
+    border: 10px solid #ff6d6d;
+}
 /*Footer Styles*/
 footer{
     position: relative;
