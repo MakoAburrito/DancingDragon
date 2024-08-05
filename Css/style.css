@@ -168,14 +168,28 @@ a.ExtraBold.MenuItem:hover{
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: red;
 }
-
-
 /*Main Styles*/
+.Policies{
+  background-color: #3d0808;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#ffffff;
+  padding: 20px;
+}
+.Policies p{
+  padding: 5px;
+}
+.Policies a{
+  color:#ffffff;
+}
 /*Grid Styles*/
 .ServicesContainer{
     background-image: linear-gradient(red, white);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax( 250px, 1fr));
+    padding: 20px;
 }
 .GridItem{
     padding: 10px;

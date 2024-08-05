@@ -1,0 +1,38 @@
+section{
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for the entire section */
+    gap: 10px; /* Space between heading and grid items */
+    padding: 40px;
+}
+
+hr{
+    border: 2.5px solid red;
+    border-radius: 5px;
+}
+.FoodContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    Padding: 10px;
+    gap: 20px;
+}
+.FoodList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.FoodList span{
+    font-size: 24px;
+    padding: 10px;
+}
+.FoodItem{
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media(max-width: 610px){
+    .FoodContainer{
+        grid-template-columns: repeat(auto-fit, minmax( 250px, 1fr));
+    }
+}
