@@ -34,6 +34,7 @@
 .sidebarContainer img{
     width: 100%;
     height: 700px;
+    object-fit:cover;
 }
 .Locations{
     display: flex;
@@ -73,9 +74,181 @@
     color: white;
     padding: 5px;
 }
-
+/*For the about page*/
+.About{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+}
+.About h1{
+    Padding: 10px;
+    text-align: center;
+}
+.About p{
+    padding: 10px;
+    text-align: justify;
+    font-size: 0.85em;
+    line-height: 1.7;
+}
+/*For the Contact Us*/
+.Customer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(90, 0, 0);
+    color: white;
+}
+.Customer p{
+    padding: 10px;
+}
+.ColumnContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 70px 30px 30px 30px;
+    gap: 0;
+    justify-content: center;
+    align-content: center;
+}
+.Column1{
+    border-radius: 20px;
+    padding-right: 30px;
+    
+}
+form input, textarea{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+#input-field
+{
+    padding: 5px;
+}
+/*For the services.html*/
+.ServicesContainer{
+    display: flex;
+    flex-direction: column;
+}
+.Servicebar{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.Servicebar img{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+}
+.ServiceInfoContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+.ServiceInfoContainer h2{
+    font-weight: 500;
+}
+.ServiceInfoContainer p{
+    padding: 20px 0px;
+}
+.ServiceInfoContainer a{
+    border: 2px solid black;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+/*css for Faq.html*/
+.faq{
+    padding: 20px;
+}
+.faq-item{
+    padding: 15px;
+}
+/*css for Shop.html*/
+.ShopOrderlist{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 2px solid rgb(160, 160, 160);
+}
+.ShopOrderlist a{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 1.25em;
+    color:black;
+}
+.ShopOrderlist a:hover{
+    border-bottom: 2px solid black;
+}
+.FoodCardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 550px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+.FoodCard{
+    background-color:rgb(255, 48, 48);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+.FoodCard .FoodImg img{
+    display:flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.FoodContent{
+    padding: 20px;
+}
+.FoodContent div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.35rem;
+}
+.FoodContent p{
+    margin: 20px 0px 40px 0px;
+    font-weight: 400;
+    font-size: 1.35rem;
+}
+.FoodContent a{
+    background-color: aliceblue;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 1.35rem;
+    color: rgb(0, 0, 0);
+}
 @media(max-width: 610px){
     .sidebar{
-        grid-template-columns: repeat(auto-fit, minmax( 250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax( 150px, 1fr));
+    }
+    .Column1{
+        width: 100%;
+        padding-right: 0;
+    }
+    .Column2{
+        width: 100%;
+    }
+    .Servicebar{
+        grid-template-columns: repeat(auto-fit, minmax( 250px, 1fr));   
     }
 }
